@@ -27,5 +27,13 @@ module Portfolio1
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.generators do |g|
+      g.orm               :active_record
+      g.template_engine   :erb
+      g.test_framework    :test_unit, fixture: false
+      g.style_sheets      false
+      g.javascripts       false
+    end
   end
 end
